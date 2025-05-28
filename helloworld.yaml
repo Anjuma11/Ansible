@@ -1,6 +1,6 @@
 - name: hello world
-  hosts: local
-  connection: local #no need of password and username
+  hosts: frontend
+  connection: frontend #no need of password and username
   tasks: 
   - name: print hello world
     ansible.builtin.debug:
