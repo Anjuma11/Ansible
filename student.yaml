@@ -1,0 +1,10 @@
+- firstname: Anjuma
+  lastname: Shaik
+  DOB: 2024-01-01
+  Address:
+  - type: perm
+    doorno: 143
+    street: gandhi nagar
+  - type: current
+    doorno: 143
+    street: gandhi nagar
