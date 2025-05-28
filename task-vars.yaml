@@ -13,4 +13,7 @@
       TRAINER: Shiva
     ansible.builtin.debug:
       msg: " Hello this Course is: {{ COURSE }}, Course duration is: {{DURATION}}, Trainer is: {{TRAINER}} "
+  - name: print course information
+    ansible.builtin.debug:
+      msg: " Hello this Course is: {{ COURSE }}, Course duration is: {{DURATION}}, Trainer is: {{TRAINER}} "
 
