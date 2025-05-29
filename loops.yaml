@@ -25,5 +25,5 @@
     loop:
     - nginx
     - mysql
-    - mongodb
+    - zip
 
