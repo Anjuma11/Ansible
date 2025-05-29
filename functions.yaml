@@ -21,6 +21,7 @@
 #     ansible.builtin.debug:
 #       msg: "Hello,{{persons}} "
 
+
 - name: functions
   hosts: local
   connection: local
@@ -31,6 +32,16 @@
     ansible.builtin.debug:
       msg: "Hello,{{ person | default ('ramesh') }}"
 
-  - name: check undefined variables
+  - name: split function
     ansible.builtin.debug:
       msg: "Hello,{{persons | split(',')}} "
+
+
+  - name: convert map into list
+    vars:
+      course:
+        name: "devsecops"
+        duration: 10hrs
+        trainer: shiva
+    ansible.builtin.debug:
+      msg: "course info: {{course | dict2items}}"
