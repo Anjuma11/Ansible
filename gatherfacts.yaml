@@ -4,4 +4,4 @@
   tasks:
   - name: printing gather facts
     ansible.builtin.debug:
-      msg: "gathering facts of target server"
+      msg: "{{ansible_facts}}"
