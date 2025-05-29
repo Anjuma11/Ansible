@@ -9,11 +9,11 @@
     - ansible
     - git
     - Prometheus
-    conecepts: #map or object or dictionary{}
+    concepts: #map or object or dictionary{}
       CI: jenkins
       Scripting: Linux, Shell, Ansible, Terraform, Python
   tasks:
   - name: print course info
     ansible.builtin.debug:
-      msg: " COURSE: {{Course}}, DURATION: {{duration}}, islive: {{islive}}, TOOLS: {{tools}}, CONCEPTS:{{concepts}}"
+      msg: " COURSE: {{Course}}, DURATION: {{DURATION}}, islive: {{islive}}, TOOLS: {{tools}}, CONCEPTS:{{concepts}}"
 
