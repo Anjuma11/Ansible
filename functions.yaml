@@ -4,4 +4,4 @@
   tasks:
   - name: check undefined variable
     ansible.builtin.debug:
-      msg: "Hello,{{ person | default: ('ramesh') }}"
+      msg: "Hello,{{ person | default ('ramesh') }}"
