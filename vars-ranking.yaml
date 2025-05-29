@@ -3,7 +3,7 @@
   connection: local
   vars:
     GREETING: "HELLO FROM PLAY1"
-  vars:
+  vars_files:
   - course.yaml
   vars_prompt:
   - name: GREETING
