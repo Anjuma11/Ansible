@@ -18,7 +18,7 @@
   become: yes
   tasks:
   - name: installing packages on ansible
-    ansible.builtin.debug:
+    ansible.builtin.package:
       name: "{{item}}"
       state: installed
 
