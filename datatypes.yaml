@@ -11,7 +11,12 @@
     - Prometheus
     concepts: #map or object or dictionary{}
       CI: jenkins
-      Scripting: Linux, Shell, Ansible, Terraform, Python
+      Scripting:
+      - Linux
+      - Shell
+      - Ansible
+      - Terraform
+      - Python
   tasks:
   - name: print course info
     ansible.builtin.debug:
