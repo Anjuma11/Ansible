@@ -6,11 +6,11 @@
   vars:
   - course.yaml
   vars_prompt:
-  - name: USERNAME
-    prompt: enter the username
+  - name: GREETING
+    prompt: enter the GREETING
     private: false
   tasks:
   - name: greeting from task1
     ansible.builtin.debug:
-      msg: "Hello from {{USERNAME}}"
+      msg: "Hello from {{GREETING}}"
     
