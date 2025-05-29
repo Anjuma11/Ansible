@@ -55,3 +55,7 @@
       - {'key': 'trainer', 'value': 'shiva'}
     ansible.builtin.debug:
       msg: "course info: {{course | items2dict}}"
+
+  - name: Uppercase function
+    ansible.builtin.debug:
+      msg: "Hello,{{persons | upper}} "
