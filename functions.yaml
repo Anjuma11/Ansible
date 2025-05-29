@@ -63,3 +63,9 @@
   - name: lowercase function
     ansible.builtin.debug:
       msg: "Hello,{{persons | lower}} "
+  
+  - name: ipaddress validation function
+    vars:
+      IP ADDRESS: 107.08.09.01
+    ansible.builtin.debug:
+      msg: "{{ IP ADDRESS | ansible.utils.ipaddr }}"
