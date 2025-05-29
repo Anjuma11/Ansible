@@ -7,6 +7,20 @@
 #       msg: "Hello,{{ person | default ('ramesh') }}"
 
 
+# - name: functions
+#   hosts: local
+#   connection: local
+#   vars:
+#     persons: "Ramesh,Suresh,Mahesh,Ganesh"
+#   tasks:
+#   - name: check undefined variables
+#     ansible.builtin.debug:
+#       msg: "Hello,{{ person | default ('ramesh') }}"
+
+#   - name: check undefined variables
+#     ansible.builtin.debug:
+#       msg: "Hello,{{persons}} "
+
 - name: functions
   hosts: local
   connection: local
@@ -19,4 +33,4 @@
 
   - name: check undefined variables
     ansible.builtin.debug:
-      msg: "Hello,{{persons}} "
+      msg: "Hello,{{persons | split(',')}} "
