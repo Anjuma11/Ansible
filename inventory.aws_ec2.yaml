@@ -2,10 +2,10 @@
   regions:
   - us-east-1
 
-  keyed_groups:
-  - key: tags.Name
-    prefix: "dynamic"
-    separator: "-"
+  # keyed_groups:
+  # - key: tags.Name
+  #   prefix: "dynamic"
+  #   separator: "-"
 
 
   filters:
