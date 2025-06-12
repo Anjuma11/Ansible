@@ -9,7 +9,6 @@
     sg_id: sg-08364b85f92f4ead4
     subnet_id: subnet-04ac9fe05b0402cdf
     zone: anjuma.store
-  vpc_id: 
   tasks:
   - name: create ec2
     amazon.aws.ec2_instance:
