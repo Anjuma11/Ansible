@@ -3,12 +3,12 @@
   connection: local
   vars:
     instances:
-    - mysql
+    - mysqlll
     - frontend
     - backend
     sg_id: sg-08364b85f92f4ead4
     subnet_id: subnet-0aef76ed6b9bd21bb
-    zone: anjuma.store
+    
   tasks:
   - name: create ec2
     amazon.aws.ec2_instance:
@@ -18,5 +18,5 @@
       security_group: "{{sg_id}}"
       image_id: ami-09c813fb71547fc4f
       tags:
-       name: "{{item}}"
-    loop: "{{instances}}"
+       name: "{{ item }}"
+    loop: "{{ instances }}"
