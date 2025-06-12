@@ -10,7 +10,7 @@
 
   filters:
     tag:Name: frontend
-    instance-state-Name: running
+    instance-state-name: running
 
   hostnames:
     - private-ip-address
