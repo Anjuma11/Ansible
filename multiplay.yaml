@@ -12,7 +12,6 @@
 
 - name: PLAY2
   hosts: 
-  
   connection: local
   tasks:
   - name: hello from play 2 and task1
