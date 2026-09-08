@@ -5,7 +5,7 @@
   - name: ansible modules under a single task
     ansible.builtin.debug:
       msg: "Hello iam from task1 with debug module"
-      
+      msg: "Hello iam from task1 with debug module from 2nd msg"
     # ansible.builtin.file:
     #   path: /app
     #   state: directory
