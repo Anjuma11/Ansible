@@ -8,8 +8,7 @@
     separator: "-"
 
   filters:
-    #tag:Name: frontend
-    tag-Name: ansible
+    tag:Name: frontend
     instance-state-name: running
 
   hostnames:
