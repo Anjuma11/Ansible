@@ -6,9 +6,9 @@
     - mysql
     - frontend
     - backend
-    sg_id: sg-08364b85f92f4ead4
-    subnet_id: subnet-0aef76ed6b9bd21bb
-    zone: anjuma.store
+    sg_id: sg-0f68753c425461a57
+    subnet_id: subnet-0e0f4f3d041b35212
+    zone: anjuma.shop
   tasks:
   - name: create ec2
     amazon.aws.ec2_instance:
@@ -16,7 +16,8 @@
       vpc_subnet_id: "{{subnet_id}}"
       instance_type: t3.micro
       security_group: "{{sg_id}}"
-      image_id: ami-09c813fb71547fc4f
+      image_id: ami-0220d79f3f480ecf5
+
       tags:
        name: "{{ item }}"
     loop: "{{ instances }}"
@@ -30,7 +31,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{zone}}"
-      record: "{{item.item}}.{{zone}}"
+      record: "{{item.item}}.{{zone}}" # 1st item is iterative, 2nd item is present in ansible_gather_facts
       type: A
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
